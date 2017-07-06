@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Number Guesser</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700&text=Number">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">
+    <link rel="stylesheet" href="master.css">
+  </head>
+  <body>
+    <header>
+      <h1>Number <span id="titleGuesser">Guesser</span></h1>
+    </header>
+    <form class="" action="index.html" method="post">
+      <input type="text" id="guessField" value="" placeholder="Enter your guess" autocomplete = "off"/>
+      <br />
+      <!-- <div class="buttonDiv"> -->
+        <input class="guesserButton" type="button" id="guessButton" value="Guess" title="Enter a number to Guess">
+        <input class="guesserButton" type="button" id="clearButton" value="Clear">
+      <!-- </div> -->
+    </form>
+    <section>
+      <p id="topText">Your last guess was:</p>
+      <p id="lastGuess">--</p>
+      <p id="response">RESPONSE</p>
+      <p id="levelUp">PLACEHOLDER</p>
+    </section>
+    <!-- <div class="buttonDiv"> -->
+      <input class="guesserButton" type="button" id="resetButton" value="Reset">
+    <!-- </div> -->
+    <script type="text/javascript" src="scripts.js"></script>
+  </body>
+</html>
