@@ -35,6 +35,11 @@
 
 //On Page Load
   rangeSetup();
+  // startGame();
+  // document.getElementById('guessField').value = "25";
+  // secretNumber = 0;
+  // analyzeGuess();
+  // document.getElementById('guessField').value ="";
 
 //Define Functions
   function leftTopButtonClick(){
@@ -102,8 +107,7 @@
 //Pick a secret number
   function pickSecretNumber(){
     secretNumber = Math.floor(Math.random()*(maxSize-minSize))+minSize;
-    //check if it worked
-    console.log(secretNumber);
+    console.log(secretNumber);   //check if it worked
   };
 
 //Input Control function
@@ -133,6 +137,7 @@
   }
 
   function rangeSetup(){ //sets page up for range entry
+    disableButtons();
     guessInput.placeholder = "Enter minimum or maximum";
     lastGuessDisplay.innerHTML = "=)"
     guessButtonInput.value = "Set Minimum";
@@ -141,7 +146,7 @@
     introText.innerHTML = "Welcome to Number Guesser!";
     levelUpMessage.innerHTML = "Current Range: " + minSize + " to " + maxSize;
     levelUpMessage.style.visibility = "visible";
-    lastGuessResult.innerHTML = "Change the random number range using the box and buttons.";
+    lastGuessResult.innerHTML = "Use the controls to set the range";
   }
 
   function setMin(){
@@ -150,7 +155,7 @@
         alert("You must enter a number!")
       }
       else if (parseInt(currentInputString) > maxSize) {
-        alert("Minimum must be smaller than Maximum!")
+        alert("Minimum must be smaller than Maximum! Current Maximum: " + maxSize)
       }
       else {
         minSize = parseInt(currentInputString);
@@ -210,10 +215,10 @@
     increaseRange();
   }
   function setupGuesser(){ //change the HTML of the page to the Guesser layout
-    guessInput.placeholder = "Enter your Guess";
+    guessInput.placeholder = "Enter your guess";
     guessInput.value = "";
     guessButtonInput.value = "Guess";
     guessClearInput.value = "Clear";
     guessResetInput.value = "Reset";
-    introText.innerHTML = "Your last guess was:";
+    introText.innerHTML = "Your last guess was";
   }
