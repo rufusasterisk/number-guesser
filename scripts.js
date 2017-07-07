@@ -133,7 +133,7 @@
     minSize = minSize-10;
     //tell the user the change to the ranges (on reset the message says the range)
     levelUpMessage.style.visibility = "visible";
-    levelUpMessage.innerHTML = "Maximum increased by 10, Minimum decreased by 10."
+    levelUpMessage.innerHTML = "Level up! Max + 10, Min - 10."
   }
 
   function rangeSetup(){ //sets page up for range entry
@@ -198,7 +198,7 @@
   }
   function resetGuesserHTML(){
     // levelUpMessage.innerHTML = "";
-    lastGuessResult.innerHTML = "Enter a guess between " + minSize + " and " + maxSize + ".";
+    lastGuessResult.innerHTML = "Guess between " + minSize + " and " + maxSize + ".";
     lastGuessDisplay.innerHTML = "--";
     levelUpMessage.style.visibility = "hidden";
     //pick a new secret number
